@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import PDFKit
 
 class Document: UIDocument {
+
+	lazy var pdfDocument = PDFDocument(url: fileURL)!
     
     override func contents(forType typeName: String) throws -> Any {
         // Encode your document with an instance of NSData or NSFileWrapper
