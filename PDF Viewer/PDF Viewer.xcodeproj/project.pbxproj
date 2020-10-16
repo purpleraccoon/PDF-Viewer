@@ -16,7 +16,7 @@
 		3AA33F102538015100DF0E76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA33F0E2538015100DF0E76 /* LaunchScreen.storyboard */; };
 		3AA33F1B2538015100DF0E76 /* PDF_ViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA33F1A2538015100DF0E76 /* PDF_ViewerTests.swift */; };
 		3AA33F262538015100DF0E76 /* PDF_ViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA33F252538015100DF0E76 /* PDF_ViewerUITests.swift */; };
-		3AA33F3A2538109000DF0E76 /* PDFPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA33F392538109000DF0E76 /* PDFPageViewController.swift */; };
+		5997489B2538BC6E00A9E654 /* PDFPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5997489A2538BC6E00A9E654 /* PDFPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		3AA33F212538015100DF0E76 /* PDF ViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PDF ViewerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA33F252538015100DF0E76 /* PDF_ViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDF_ViewerUITests.swift; sourceTree = "<group>"; };
 		3AA33F272538015100DF0E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AA33F392538109000DF0E76 /* PDFPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPageViewController.swift; sourceTree = "<group>"; };
+		5997489A2538BC6E00A9E654 /* PDFPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +106,9 @@
 				3AA33F012538015000DF0E76 /* AppDelegate.swift */,
 				3AA33F032538015000DF0E76 /* DocumentBrowserViewController.swift */,
 				3AA33F052538015000DF0E76 /* DocumentViewController.swift */,
+				5997489A2538BC6E00A9E654 /* PDFPageViewController.swift */,
 				3AA33F072538015000DF0E76 /* Document.swift */,
 				3AA33F092538015000DF0E76 /* Main.storyboard */,
-				3AA33F392538109000DF0E76 /* PDFPageViewController.swift */,
 				3AA33F0C2538015100DF0E76 /* Assets.xcassets */,
 				3AA33F0E2538015100DF0E76 /* LaunchScreen.storyboard */,
 				3AA33F112538015100DF0E76 /* Info.plist */,
@@ -267,7 +267,7 @@
 				3AA33F082538015000DF0E76 /* Document.swift in Sources */,
 				3AA33F062538015000DF0E76 /* DocumentViewController.swift in Sources */,
 				3AA33F042538015000DF0E76 /* DocumentBrowserViewController.swift in Sources */,
-				3AA33F3A2538109000DF0E76 /* PDFPageViewController.swift in Sources */,
+				5997489B2538BC6E00A9E654 /* PDFPageViewController.swift in Sources */,
 				3AA33F022538015000DF0E76 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

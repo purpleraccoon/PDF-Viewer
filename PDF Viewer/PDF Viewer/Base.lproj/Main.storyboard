@@ -24,67 +24,42 @@
             <point key="canvasLocation" x="26" y="654"/>
         </scene>
         <!--Document View Controller-->
-        <scene sceneID="dkP-xk-x6W">
+        <scene sceneID="eEJ-fh-Mku">
             <objects>
-                <viewController storyboardIdentifier="DocumentViewController" id="M2k-L8-Olo" customClass="DocumentViewController" customModule="PDF_Viewer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SIE-Uh-Zny">
+                <pageViewController storyboardIdentifier="DocumentViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="KSF-Vg-lAq" customClass="DocumentViewController" customModule="PDF_Viewer" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dC-L7-7Im" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="654"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="iNM-Y6-HlT">
+            <objects>
+                <viewController storyboardIdentifier="PDFPage" id="2gI-dM-98L" customClass="PDFPageViewController" customModule="PDF_Viewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BuR-Nj-WBB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="2l7-xg-u1v">
-                                <rect key="frame" x="84" y="292" width="207" height="83.5"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jzy-az-Q3G">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="20.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDw-Fo-hfZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Document Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s46-Uc-0IM">
-                                                <rect key="frame" x="78.5" y="0.0" width="128.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-IC-g0u">
-                                        <rect key="frame" x="78" y="44.5" width="51" height="39"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                        <state key="normal" title="Done"/>
-                                        <connections>
-                                            <action selector="dismissDocumentViewController" destination="M2k-L8-Olo" eventType="touchUpInside" id="Hqu-HM-7pb"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0X-cd-Cwk" customClass="PDFView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9d1-df-9HZ" customClass="PDFView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="BoZ-jc-2Y8"/>
+                        <viewLayoutGuide key="safeArea" id="nyL-5k-IC1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="trailing" secondItem="f0X-cd-Cwk" secondAttribute="trailing" id="DeS-Nz-Hcg"/>
-                            <constraint firstItem="f0X-cd-Cwk" firstAttribute="leading" secondItem="BoZ-jc-2Y8" secondAttribute="leading" id="SAf-N2-hid"/>
-                            <constraint firstItem="2l7-xg-u1v" firstAttribute="centerX" secondItem="SIE-Uh-Zny" secondAttribute="centerX" id="UUS-kO-C91"/>
-                            <constraint firstItem="f0X-cd-Cwk" firstAttribute="top" secondItem="BoZ-jc-2Y8" secondAttribute="top" id="V0G-KJ-GIO"/>
-                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="bottom" secondItem="f0X-cd-Cwk" secondAttribute="bottom" id="l7C-H3-VHc"/>
-                            <constraint firstItem="2l7-xg-u1v" firstAttribute="centerY" secondItem="SIE-Uh-Zny" secondAttribute="centerY" id="yEe-m6-dL4"/>
+                            <constraint firstItem="nyL-5k-IC1" firstAttribute="bottom" secondItem="9d1-df-9HZ" secondAttribute="bottom" id="4mt-Vc-2Yf"/>
+                            <constraint firstItem="9d1-df-9HZ" firstAttribute="leading" secondItem="nyL-5k-IC1" secondAttribute="leading" id="TZE-qL-Wbg"/>
+                            <constraint firstItem="9d1-df-9HZ" firstAttribute="top" secondItem="nyL-5k-IC1" secondAttribute="top" id="aJ5-Ql-LcF"/>
+                            <constraint firstItem="nyL-5k-IC1" firstAttribute="trailing" secondItem="9d1-df-9HZ" secondAttribute="trailing" id="kEh-q6-nzz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="documentNameLabel" destination="s46-Uc-0IM" id="S9N-4c-eHT"/>
-                        <outlet property="pdfView" destination="f0X-cd-Cwk" id="1hX-vv-Rlf"/>
+                        <outlet property="pdfView" destination="9d1-df-9HZ" id="s0v-DI-Nm6"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rl9-ES-qQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ga7-C3-gpV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029.5999999999999" y="653.52323838080963"/>
+            <point key="canvasLocation" x="1999" y="654"/>
         </scene>
     </scenes>
     <resources>
