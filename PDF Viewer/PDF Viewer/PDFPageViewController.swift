@@ -25,10 +25,11 @@ class PDFPageViewController: UIViewController {
 
 		if let doc = pdfDocument, let page = doc.page(at: pageNumber)  {
 			pdfView.document = doc
+			pdfView.go(to: page)
 			pdfView.autoScales = true
+//			pdfView.minScaleFactor = pdfView.scaleFactor
 			pdfView.displayDirection = .horizontal
 			pdfView.displayMode = .singlePage
-			pdfView.go(to: page)
 		}
 	}
     

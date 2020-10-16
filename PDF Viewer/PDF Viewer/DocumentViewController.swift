@@ -10,6 +10,12 @@ import PDFKit
 
 class DocumentViewController: UIPageViewController {
     var document: Document?
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		dataSource = self
+		
+	}
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,7 +44,19 @@ class DocumentViewController: UIPageViewController {
 
 extension DocumentViewController: UIPageViewControllerDataSource {
 	func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-		if document?.pdfDocument.pageCount ?? 0 > (viewController as! PDFPageViewController).pageNumber {
+		if 0 < (viewController as! PDFPageViewController).pageNumber {
+			let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+			let pageVC = storyBoard.instantiateViewController(withIdentifier: "PDFPage") as! PDFPageViewController
+			pageVC.pdfDocument = self.document?.pdfDocument
+			pageVC.pageNumber = (viewController as! PDFPageViewController).pageNumber - 1
+			return pageVC
+		} else {
+			return nil
+		}
+	}
+
+	func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+		if (document?.pdfDocument.pageCount ?? 1) - 1 > (viewController as! PDFPageViewController).pageNumber {
 			let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 			let pageVC = storyBoard.instantiateViewController(withIdentifier: "PDFPage") as! PDFPageViewController
 			pageVC.pdfDocument = self.document?.pdfDocument
@@ -47,10 +65,6 @@ extension DocumentViewController: UIPageViewControllerDataSource {
 		} else {
 			return nil
 		}
-	}
-
-	func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-		return nil
 	}
 
 

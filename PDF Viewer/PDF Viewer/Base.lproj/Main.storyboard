@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DocumentBrowserViewController" customModule="PDF_Viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="0fo-ii-Aj5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -26,7 +26,7 @@
         <!--Document View Controller-->
         <scene sceneID="eEJ-fh-Mku">
             <objects>
-                <pageViewController storyboardIdentifier="DocumentViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="KSF-Vg-lAq" customClass="DocumentViewController" customModule="PDF_Viewer" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="DocumentViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="KSF-Vg-lAq" customClass="DocumentViewController" customModule="PDF_Viewer" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dC-L7-7Im" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1055" y="654"/>
@@ -36,21 +36,21 @@
             <objects>
                 <viewController storyboardIdentifier="PDFPage" id="2gI-dM-98L" customClass="PDFPageViewController" customModule="PDF_Viewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BuR-Nj-WBB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9d1-df-9HZ" customClass="PDFView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nyL-5k-IC1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nyL-5k-IC1" firstAttribute="bottom" secondItem="9d1-df-9HZ" secondAttribute="bottom" id="4mt-Vc-2Yf"/>
-                            <constraint firstItem="9d1-df-9HZ" firstAttribute="leading" secondItem="nyL-5k-IC1" secondAttribute="leading" id="TZE-qL-Wbg"/>
-                            <constraint firstItem="9d1-df-9HZ" firstAttribute="top" secondItem="nyL-5k-IC1" secondAttribute="top" id="aJ5-Ql-LcF"/>
-                            <constraint firstItem="nyL-5k-IC1" firstAttribute="trailing" secondItem="9d1-df-9HZ" secondAttribute="trailing" id="kEh-q6-nzz"/>
+                            <constraint firstItem="9d1-df-9HZ" firstAttribute="top" secondItem="BuR-Nj-WBB" secondAttribute="top" id="7Kg-W4-gHc"/>
+                            <constraint firstItem="9d1-df-9HZ" firstAttribute="trailing" secondItem="nyL-5k-IC1" secondAttribute="trailing" id="hFC-WK-OZw"/>
+                            <constraint firstAttribute="bottom" secondItem="9d1-df-9HZ" secondAttribute="bottom" id="jri-HS-9AM"/>
+                            <constraint firstItem="9d1-df-9HZ" firstAttribute="leading" secondItem="nyL-5k-IC1" secondAttribute="leading" id="mSR-5i-Rph"/>
                         </constraints>
                     </view>
                     <connections>
@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ga7-C3-gpV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1999" y="654"/>
+            <point key="canvasLocation" x="1998.5611510791368" y="653.7688442211055"/>
         </scene>
     </scenes>
     <resources>
